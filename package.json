@@ -1,0 +1,22 @@
+{
+  "name": "OpenTableClient",
+  "version": "0.0.0",
+  "description": "OpenTable API client in Nodejs",
+  "main": "openTableClient.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/superspr/OpenTableClient.git"
+  },
+  "author": "Superspr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superspr/OpenTableClient/issues"
+  },
+  "homepage": "https://github.com/superspr/OpenTableClient",
+  "dependencies": {
+    "querystring": "^0.2.0"
+  }
+}
