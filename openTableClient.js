@@ -1,8 +1,8 @@
 var querystring = require('querystring');
 var Client = require('node-rest-client').Client;
-client = new Client();
+var client = new Client();
 var OpenTable = function() {
-  this.base_url = "http://opentable.herokuapp.com/";
+  this.base_url = "http://opentable.herokuapp.com/api";
   //return this;
 };
 
@@ -18,15 +18,14 @@ OpenTable.prototype.get = function(resource, params, callback) {
 	}
 }
 
-/*
-Exampe:
-yelp.search({term: "food", location: "Montreal"}, function(error, data) {});
-*/
-OpenTable.prototype.search = function(params, callback) {
-  return this.get('search', params, callback);
+OpenTable.prototype.getCities = function(callback) {
+	return this.get('/cities', null, callback);
 }
 OpenTable.prototype.getStats = function(callback) {
-	return this.get('api/stats', null, callback);
+	return this.get('/stats', null, callback);
+}
+OpenTable.prototype.getRestaurant = function(param, callback) {
+	return this.get('/restaurants/' + param, null, callback);
 }
 
 
